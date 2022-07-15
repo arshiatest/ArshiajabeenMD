@@ -5,6 +5,7 @@ public class AccountHandler {
         string s;
         try{
             insert acc;
+            //commented line
             system.debug('account inserted:'+acc.id);
             return acc;
         }
