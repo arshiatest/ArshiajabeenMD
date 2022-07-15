@@ -1,0 +1,30 @@
+<apex:page controller="intrest_example">
+    <apex:sectionHeader title="intrest" subtitle="intrest calculation"/>
+    <apex:form id="pg">
+    <apex:pageBlock title="intrest" >
+        <apex:pageBlockButtons location="top">
+        <apex:commandButton value="calculate" action="{!calculate}" reRender="pg"/>
+        <apex:commandButton value="reset" action="{!reset}" reRender="pg"/>
+        </apex:pageBlockButtons>
+        <apex:pageBlockSection columns="1">
+            <apex:pageblocksectionitem >
+            <apex:outputLabel >amount:</apex:outputLabel>
+                <apex:inputtext value="{!amount}"/>
+            </apex:pageblocksectionitem>
+             <apex:pageblocksectionitem >
+           <apex:outputLabel value="years:"/>
+                <apex:inputtext value="{!years}"/>
+            </apex:pageblocksectionitem>
+        <apex:pageblocksectionitem >
+           <apex:outputLabel value="rate:"/>
+                <apex:inputtext value="{!rate}" />
+            </apex:pageblocksectionitem>
+             <apex:pageblocksectionitem >
+           <apex:outputLabel value="intrest:" rendered="{! !isnull(intrest)}"/>
+                 <apex:outputlabel value="{!intrest}" />
+            </apex:pageblocksectionitem>
+            
+        </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

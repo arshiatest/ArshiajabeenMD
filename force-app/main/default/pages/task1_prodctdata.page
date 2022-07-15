@@ -1,0 +1,6 @@
+<apex:page controller="task1_productdata">
+    product :{!prodname}<br/>
+    price :{!price}<br/>
+    quantity : {!price}
+    
+</apex:page>

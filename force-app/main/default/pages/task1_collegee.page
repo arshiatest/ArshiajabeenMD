@@ -1,0 +1,6 @@
+<apex:page controller="task1_college" >
+    college name: {!clgname}<br/>
+    branch :{!branch}<br/>
+    city: {!city}<br/>
+    phone: {!phone}<br/>
+</apex:page>

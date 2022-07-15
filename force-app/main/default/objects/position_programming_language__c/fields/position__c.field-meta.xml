@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>position__c</fullName>
+    <externalId>false</externalId>
+    <label>position</label>
+    <referenceTo>position__c</referenceTo>
+    <relationshipLabel>position programming languages</relationshipLabel>
+    <relationshipName>position_programming_languages</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

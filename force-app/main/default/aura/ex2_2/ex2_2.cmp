@@ -1,0 +1,9 @@
+<aura:component >
+    <aura:attribute name="city" type="string" />
+    <aura:attribute name="place" type="string" />
+    <aura:attribute name="state" type="string" />
+     <br/> <br/>
+    city :{!v.city}<br/> <br/>
+    place: {!v.place}<br/> <br/>
+    state : {!v.state}<br/> <br/>
+</aura:component>

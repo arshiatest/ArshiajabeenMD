@@ -1,0 +1,11 @@
+<aura:component  >
+    <aura:attribute name="student_name" type="string" />
+    <aura:attribute name="age" type="integer" />
+    <aura:attribute name="place" type="string" required="true" />
+    <aura:attribute name="city" type="string" default="hyderabad" />
+    
+    studenet_name :{!v.student_name}<br/> 
+    age : {!v.age} <br/>
+    place :{!v.place}<br/>
+    city: {!v.city}
+ </aura:component>

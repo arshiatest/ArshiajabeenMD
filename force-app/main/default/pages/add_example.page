@@ -1,0 +1,25 @@
+<apex:page controller="add_example" >
+    <apex:sectionHeader title="add" subtitle="addition" description="addition of two numbers"/>
+    <apex:form id="pp">
+    <apex:pageblock title="block" >
+        <apex:pageBlockButtons location="top">
+        <apex:commandButton value="add" action="{!add}" rerender="pp"/>
+         <apex:commandButton value="reset" action="{!reset}" reRender="pp"/>
+        </apex:pageBlockButtons>
+        <apex:pageBlockSection columns="1">
+           <apex:pageBlockSectionItem >
+               <apex:outputLabel >aval:</apex:outputLabel>
+              <apex:inputText value="{!aval}"/>
+            </apex:pageBlockSectionItem> 
+            <apex:pageBlockSectionItem >
+               <apex:outputLabel >bval:</apex:outputLabel>
+              <apex:inputText value="{!bval}"/>
+            </apex:pageBlockSectionItem> 
+            <apex:pageBlockSectionItem >
+               <apex:outputLabel >cval:</apex:outputLabel>
+              <apex:outputText value="{!cval}"/>
+            </apex:pageBlockSectionItem> 
+        </apex:pageBlockSection>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

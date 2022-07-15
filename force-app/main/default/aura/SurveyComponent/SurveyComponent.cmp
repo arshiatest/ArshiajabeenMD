@@ -1,0 +1,139 @@
+<aura:component controller="SaveSurvey" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"  access="global"  >
+	  <aura:attribute name="survey" type="Survey__c" 
+      default="{ 'sobjectType': 'Survey__c','Were_you_satisfied_with_the_information__c':'true' ,'Was_the_audio_quality_good__c':'true','Do_you_feel_that_the_speakers_were_clear__c':'false'}"/>
+   <aura:attribute name="startId" type="string"/>
+    <aura:attribute name="Were_you_satisfied_with_the_information__c" type="boolean" default="true"/>
+    <aura:attribute name="Was_the_audio_quality_good__c" type="boolean" default="true"/>
+    <aura:attribute name="Active_Survey__c" type="boolean" default="true"/>
+    <aura:attribute name="parentId" type="string"/>
+    <aura:handler name="init" value="this" action="{!c.doInit}"/>
+    <aura:attribute name="userInfo" type="user"/> 
+     <aura:attribute name="userprofile" type="string"/> 
+    <aura:attribute name="Isadmin" type="Boolean" default='false'/> 
+   <div class="slds-grid">
+       <div class="slds-col slds-p-horizontal_medium">
+       <aura:if isTrue="{!v.Isadmin}">
+           <span>
+              <div style="padding:2%" id="divid" ondrop="{!c.drop}" ondragover="{!c.allowDrop}">
+    <lightning:card  title="Dell Survey">
+      <div style="padding:2%" id="divs" ondrop="{!c.drop}" ondragover="{!c.allowDrop}">
+        
+            <div class="slds-grid">
+                 <div class="slds-col slds-size_1-of-1 " >
+                      <div class="slds-col slds-size_1-of-1" id="div1" ondrop="{!c.drop}" ondragover="{!c.allowDrop}" title="Were you satisfied with the information covered at the All Hands meeting?">
+                         <p draggable="true" ondragstart="{!c.drag}" id="drag1">
+                          <label><b>Were you satisfied with the information covered at the All Hands meeting?</b></label> 
+                 		<div class="customRadioCls" >
+                           <ui:inputRadio aura:id="r7" name="Were_you_satisfied_with_the_information__c" label="Yes"  text="Yes" />
+                     		<ui:inputRadio aura:id="r8" name="Were_you_satisfied_with_the_information__c" label="No"  text="No" />	
+                      	</div>
+                        </p>
+        			 </div>
+                      
+              
+                   <div class="slds-col slds-size_1-of-1" id="div2" ondrop="{!c.drop}" ondragover="{!c.allowDrop}" title="Was the audio quality good?"> 
+                   		<p draggable="true" ondragstart="{!c.drag}" id="drag2">
+     			      
+                 		<label><b>Was the audio quality good?</b></label> 
+                 			<div class="customRadioCls">
+                        		<ui:inputRadio aura:id="r9" name="Was_the_audio_quality_good__c" label="Yes"  text="Yes" />
+                        		<ui:inputRadio aura:id="r10" name="Was_the_audio_quality_good__c" label="No"  text="No" />
+                 			</div> 
+                      	</p>
+                    </div> 
+                  	<div class="slds-col slds-size_1-of-1" id="div3" ondrop="{!c.drop}" ondragover="{!c.allowDrop}" title="Do you feel that the speakers were clear in the information they were trying to portray?"> 
+                   			<p draggable="true" ondragstart="{!c.drag}" id="drag3">
+                 				<label><b>Do you feel that the speakers were clear in the information they were trying to portray?</b></label> 
+                 			<div class="customRadioCls">
+                        		<ui:inputRadio aura:id="r11" name="Do_you_feel_that_the_speakers_were_clear__c" label="Yes"  text="Yes"  />
+                        		<ui:inputRadio aura:id="r12" name="Do_you_feel_that_the_speakers_were_clear__c" label="No"  text="No" />
+                 			</div>
+                      
+                     		</p>
+                      </div> 
+                   </div>
+              
+             </div>
+       </div>
+       
+    </lightning:card>
+               </div>
+               </span>
+           </aura:if>
+           </div> 
+    
+        <aura:if isTrue="{!v.Isadmin}">
+            
+       <div class="slds-col slds-p-horizontal_medium" id="dropdiv" >
+   			
+        <span id="maindrag" >
+            <div class="slds-col slds-p-horizontal_medium" id="dropdiv1" ondrop="{!c.drop}" ondragover="{!c.allowDrop}">
+   			 <lightning:card  title="Selected Survey">
+        
+        <div style="padding:2%" id="myid" >
+            </div>
+            <div style="padding:2%" class="slds-grid" >
+        <lightning:button variant="brand" label="cancel" title="cancel"  class="ColorBlue" />
+               <lightning:button variant="brand" label="Save" title="Click once selected"  class="ColorBlue" onclick="{!c.saverecord}"/> 
+       <lightning:button variant="brand" label="Save And Active" title="Click once selected"  class="ColorBlue" onclick="{!c.saverecord1}" /> 
+
+                 </div> 
+                 
+        </lightning:card>
+            </div>
+        </span>  
+          
+     
+                
+             </div>
+        </aura:if>	
+           </div>
+   <!-- <aura:if isTrue="{!(v.Active_Survey__c)}">
+        <div>
+    
+            
+       <div class="slds-col slds-p-horizontal_medium" id="dropdiv" ondrop="{!c.drop}" ondragover="{!c.allowDrop}">
+   			
+        <span id="maindrag">
+   			 <lightning:card  title="Active Survey">
+        
+        <div style="padding:2%">
+            <aura:if isTrue="{!v.Were_you_satisfied_with_the_information__c}" >
+         <label><b>Were you satisfied with the information covered at the All Hands meeting?</b></label> 
+                 <div class="customRadioCls" >
+                    
+                        <ui:inputRadio aura:id="r7" name="Were_you_satisfied_with_the_information__c" label="Yes"  text="Yes" />
+                     
+                    
+                     <ui:inputRadio aura:id="r8" name="Were_you_satisfied_with_the_information__c" label="No"  text="No" />
+                 	
+                      </div>
+                </aura:if>
+             <aura:if isTrue="{!v.Was_the_audio_quality_good__c}" >
+            <label><b>Was the audio quality good?</b></label> 
+                 <div class="customRadioCls">
+                        <ui:inputRadio aura:id="r9" name="Was_the_audio_quality_good__c" label="Yes"  text="Yes" />
+                        <ui:inputRadio aura:id="r10" name="Was_the_audio_quality_good__c" label="No"  text="No" />
+                 </div> 
+                 </aura:if>
+                 </div> 
+                 <div style="padding:2%" class="slds-grid" >
+                  <lightning:button variant="brand" label="cancel" title="cancel"  class="ColorBlue" />
+               <lightning:button variant="brand" label="Submit Response" title="Click once selected"  class="ColorBlue" /> 
+                 </div>
+           
+        </lightning:card>
+        
+        </span>  
+          
+     
+                
+             </div>
+        
+            </div>
+    </aura:if> -->
+   
+
+
+
+</aura:component>

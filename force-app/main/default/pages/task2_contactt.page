@@ -1,0 +1,5 @@
+<apex:page controller="task2_contact">
+     name : {!con.firstname} {!con.lastname}<br/>
+     email :{!con.email}<br/>
+    phone : {!con.phone}
+</apex:page>

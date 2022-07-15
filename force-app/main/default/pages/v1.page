@@ -1,0 +1,8 @@
+<apex:page >
+ <h1>hello viewers</h1><br/>
+ <b>welcome to our page</b><br/>
+ my name is <u>{!$User.FirstName}</u><br/>
+ fav image is :
+ 
+  <apex:image url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxxSqoE7XZSuJhixzSjUAykbVhaDs2E5mPcK6YruR_kSPQ6weW-Q" height="300" width="300"/>
+ </apex:page>

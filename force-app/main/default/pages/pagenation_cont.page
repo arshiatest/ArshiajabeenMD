@@ -1,0 +1,18 @@
+<apex:page controller="pagenation_cont" >
+    <apex:form >
+    <apex:pageBlock id="nn">
+        <apex:pageBlockButtons location="top">
+        <apex:commandButton value="first" action="{!controller.first}" rendered="{! controller.hasprevious}" rerender="nn"/>
+            <apex:commandButton value="previous" action="{!controller.previous}" rendered="{! controller.hasprevious}" rerender="nn"/>
+            <apex:commandButton value="next" action="{!controller.next}" rendered="{! controller.hasnext}" rerender="nn"/>
+            <apex:commandButton value="last" action="{!controller.last}" rendered="{! controller.hasnext}" rerender="nn"/>
+        </apex:pageBlockButtons>
+        <apex:pageblocktable value="{!opty}" var="a">
+        <apex:column value="{!a.id}"/>
+             <apex:column value="{!a.stagename}"/>
+             <apex:column value="{!a.amount}"/>
+        </apex:pageblocktable>
+        <center> {!controller.pagenumber} of {!pagenumber}</center>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

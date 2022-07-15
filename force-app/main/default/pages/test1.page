@@ -1,0 +1,21 @@
+<apex:page id="page">
+    <script>
+      function callme(myid){
+          document.write('id is:' +myid)
+      }
+    </script>
+    <apex:form id="fm">
+    <apex:pageblock id="pb">
+        <apex:pageBlockSection id="pbs">
+        <apex:pageblocksectionitem id="pbsi1">
+            <apex:outputLabel value="enter name"/>
+           <apex:inputText id="name" onchange="callme(this.id)"/>
+            </apex:pageblocksectionitem>
+            <apex:pageblocksectionitem id="pbsi2">
+            <apex:outputLabel value="enter age"/>
+           <apex:inputText id="age" onchange="callme(this.id)"/>
+            </apex:pageblocksectionitem>
+        </apex:pageBlockSection>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

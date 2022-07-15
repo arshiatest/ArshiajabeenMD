@@ -1,0 +1,30 @@
+<apex:page controller="dml1" >
+    <apex:form >
+        <apex:pageMessages ></apex:pageMessages>
+        <apex:sectionHeader title="account" subtitle="new account"/>
+    <apex:pageblock >
+        <apex:pageBlockButtons location="top">
+        <apex:commandButton value="save" action="{!save}"/>
+            <apex:commandButton value="cancel" action="{!cancel}"/>
+        </apex:pageBlockButtons>
+        <apex:pageblocksection >
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel >name</apex:outputLabel>
+            <apex:inputText value="{!name}"/>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+            <apex:outputLabel >industry</apex:outputLabel>
+            <apex:inputText value="{!industry}"/>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+            <apex:outputLabel >type</apex:outputLabel>
+            <apex:inputText value="{!type}"/>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+            <apex:outputLabel >rating</apex:outputLabel>
+            <apex:inputText value="{!rating}"/>
+            </apex:pageBlockSectionItem>
+        </apex:pageblocksection>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,52 @@
+<apex:page controller="vid2">
+    <apex:form id="pp">
+        <apex:sectionHeader title="student" subtitle="new student" help="/apex/page"/>
+        <apex:pageBlock title="student registration" >
+            <apex:pageBlockButtons location="top">
+            <apex:commandButton value="submit" reRender="pp" />
+            </apex:pageBlockButtons>
+           <apex:pageBlockSection columns="1">
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="name"/>
+                 <apex:inputText value="{!name}"/>
+               </apex:pageBlockSectionItem>
+               <apex:pageBlockSectionItem >
+                <apex:outputLabel value="age"/>
+                 <apex:inputText value="{!age}"/>
+               </apex:pageBlockSectionItem>
+               <apex:pageBlockSectionItem >
+                <apex:outputLabel value="city"/>
+                <apex:selectList size="1" value="{!city}">
+                    <apex:selectOption itemLabel="--none--" itemValue="none"/>
+                       <apex:selectOption itemLabel="tg" itemValue="hyd"/>
+                       <apex:selectOption itemLabel="ka" itemValue="ban"/>
+                       <apex:selectOption itemLabel="tn" itemValue="chen"/>
+                   </apex:selectList>
+               </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                <apex:outputLabel value="gender"/>
+                    <apex:selectRadio value="{!gender}">
+                    <apex:selectOption itemLabel="male" itemValue="male"/>
+                       <apex:selectOption itemLabel="female" itemValue="female"/>
+                        </apex:selectRadio> 
+               </apex:pageBlockSectionItem>
+               <apex:pageBlockSectionItem >
+                <apex:outputLabel value="languages"/>
+                    <apex:selectCheckboxes value="{!languages}">
+                    <apex:selectOption itemLabel="eng" itemValue="english"/>
+                       <apex:selectOption itemLabel="hin" itemValue="hindi"/>
+                        <apex:selectOption itemLabel="tel" itemValue="telugu"/>
+                       </apex:selectCheckboxes> 
+               </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+      <apex:pageBlock >
+          <apex:outputlabel value="name is:{!name}"/><br/><br/>
+          <apex:outputlabel value="age is : {!age}"/> <br/><br/>
+              <apex:outputlabel value="city is : {!city}"/><br/><br/>
+             <apex:outputlabel value="gender is : {!gender}"/><br/><br/>
+             <apex:outputlabel value="city is : {!city}"/><br/><br/>
+             <apex:outputlabel value="languages is : {!languages}"/><br/><br/>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,68 @@
+<aura:component>
+    <aura:attribute name="que1" type="List" default="[
+                                                       {'label': 'yes', 'value': 'yes'},
+                                                       {'label': 'no', 'value': 'no'}
+                                                       ]"/>    
+    
+    <aura:attribute name="que2" type="List" default="[
+                                                       {'label': 'yes', 'value': 'yes'},
+                                                       {'label': 'no', 'value': 'no'}
+                                                       ]"/> 
+     <aura:attribute name="que3" type="List" default="[
+                                                       {'label': 'monthly', 'value': 'monthly'},
+                                                       {'label': 'quarterly', 'value': 'quarterly'},
+                                                      {'label': 'bi-annually', 'value': 'bi-annually'},
+                                                      {'label': 'annually', 'value': 'annually'}
+                                                       ]"/>  
+       
+    <aura:attribute name="que1value" type="String" />
+    <aura:attribute name="que2value" type="String" />
+    <aura:attribute name="que3value" type="String" />
+    
+    <b>survey questions</b><br/><br/><br/>
+    
+    <lightning:radioGroup name="question1" 
+                          label="Was the audio quality good"
+                          options="{! v.que1 }"
+                          value="{! v.que1value }"
+                          type="radio"
+                          />
+    <hr/>
+ 
+    <lightning:radioGroup name="question2" 
+                          label="Do you feel that the speakers were clear in the information they were trying to portray?"
+                          options="{! v.que2 }"
+                          value="{! v.que2value }"
+                          type="radio"
+                          />
+    <hr/>
+    <lightning:radioGroup name="question3" 
+                          label="How often do you think these meetings should be held?"
+                          options="{! v.que3 }"
+                          value="{! v.que3value }"
+                          type="radio"
+                          class="customRadioCls"
+                          />
+    <hr/>
+    <div class="slds-grid slds-gutters">
+       <div class="slds-col">
+           <span>
+        <div class="dnd-table-parent">
+            <div class="dnd-table">
+                <aura:iteration items="{!v.question1}" var="tableRow">
+                    <div id="{!tableRow.rowid}" class="dnd-table-row" draggable="true" ondragstart="{!c.handleDrag}">
+                        <aura:iteration items="{!tableRow.rowdata}" var="tableCell">
+                            <div class="dnd-table-cell">
+                                {!tableCell}
+                            </div>
+                        </aura:iteration>
+                    </div>
+                </aura:iteration>
+            </div>
+            </div>
+               </span>
+        </div>
+    </div>
+        <br/><br/>
+    
+</aura:component>

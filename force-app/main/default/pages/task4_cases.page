@@ -1,0 +1,9 @@
+<apex:page controller="task4_cases">
+    <apex:pageblock >
+    <apex:pageblocktable value="{!cases}" var="c">
+        <apex:column value="{!c.subject}"/>
+         <apex:column value="{!c.status}"/>
+         <apex:column value="{!c.priority}"/>
+        </apex:pageblocktable>
+    </apex:pageblock>
+</apex:page>

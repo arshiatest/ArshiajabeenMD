@@ -1,0 +1,4 @@
+<aura:component >
+    <c:ex2 name="arshia" branch="eee" age="25" />
+    <c:ex2_2 city="hyderabad" place="kphb" state="TG" />
+</aura:component>

@@ -1,0 +1,120 @@
+<aura:component controller="SaveSurvey" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+   <aura:attribute name="surveyCompleted" type="boolean" default="false"/>
+   <aura:attribute name="surveyDependentFields" type="String[]" />
+   <aura:attribute name="SelctedSurveyTypes" type="String[]" />
+   <aura:attribute name="myContact" type="List" default="['Survey_Name__c']" />
+   <aura:attribute name="survey" type="Survey__c" 
+      default="{ 'sobjectType': 'Survey__c','How_satisfied_are_you_with_Sodexo_servic__c':'1' ,'would_you_recommend_our_website_tofriend__c':'1','How_do_you_rate_the_entertainment_events__c':'1'}"/>
+   <aura:attribute name="SelectedSurvey" type="String" default="" />
+   <aura:attribute name="newContact" type="Object"/>
+   <aura:attribute name="simpleNewContact" type="Object"/>
+   <aura:attribute name="newContactError" type="String"/>
+   <aura:attribute name="options" type="List" default="[
+      { label: 'Carrom Board', value: 'Carrom Board' },
+      { label: 'Chess', value: 'Chess' },
+      { label: 'Basket Ball', value: 'Basket Ball' }]"/>
+ 
+    <lightning:card  title="Dell Survey">
+      <div style="padding:2%">
+         <aura:if isTrue="{!!v.surveyCompleted}">
+            <div class="slds-grid slds-wrap">
+               <div class="slds-col slds-size_1-of-1 slds-large-size_9-of-12">
+                  <div class="slds-col slds-size_1-of-1 slds-large-size_5-of-12">
+                     
+         <!--    <label><b>1.	How engaging was your instructor ?	</b></label> 
+                   <div class="customRadioCls">
+                        <ui:inputRadio aura:id="r7" name="How_engaging_was_your_instructor__c" label="Extremely engaging"  text="Extremely engaging" change="{!c.doChange}"/>
+                           
+                        <ui:inputRadio aura:id="r8" name="How_engaging_was_your_instructor__c" label="Not so engaging"  text="Not so engaging" change="{!c.doChange}"/>
+                           
+                        <ui:inputRadio aura:id="r9" name="How_engaging_was_your_instructor__c" label="Somewhat engaging"  text="Somewhat engaging" change="{!c.doChange}"/>
+                     </div>  
+                      
+                       <label><b>2.	How do you feel about the information presented?</b></label> 
+                   <div class="customRadioCls">
+                        <ui:inputRadio aura:id="r10" name="X2_How_do_you_feel_about_the_information__c" label="About the right amount of information"  text="About the right amount of information" change="{!c.doChange}"/>
+                           
+                        <ui:inputRadio aura:id="r11" name="X2_How_do_you_feel_about_the_information__c" label="Too much information"  text="Too much information" change="{!c.doChange}"/>
+                           
+                        <ui:inputRadio aura:id="r12" name="X2_How_do_you_feel_about_the_information__c" label="Too little information"  text="Too little information" change="{!c.doChange}"/>
+                     </div>
+                      
+                       <label><b>3.	How relevant is the material to your role?</b></label> 
+                   <div class="customRadioCls">
+                        <ui:inputRadio aura:id="r13" name="X3_How_relevant_is_the_material_to_your__c" label="Extremely relevant"  text="Extremely relevant" change="{!c.doChange}"/>
+                           
+                        <ui:inputRadio aura:id="r14" name="X3_How_relevant_is_the_material_to_your__c" label="Not so relevant"  text="Not so relevant" change="{!c.doChange}"/>
+                           
+                        <ui:inputRadio aura:id="r15" name="X3_How_relevant_is_the_material_to_your__c" label="Somewhat relevant"  text="Somewhat relevant" change="{!c.doChange}"/>
+                     </div>
+                      
+                      
+                       <label><b>4.	How clear are you on the take away from the session?</b></label> 
+                   <div class="customRadioCls">
+                        <ui:inputRadio aura:id="r16" name="How_clear_are_you_on_the_take_away_fr__c" label="Extremely clear"  text="Extremely clear" change="{!c.doChange}"/>
+                           
+                        <ui:inputRadio aura:id="r17" name="How_clear_are_you_on_the_take_away_fr__c" label="Somewhat clear"  text="Somewhat clear" change="{!c.doChange}"/>
+                           
+                        <ui:inputRadio aura:id="r18" name="How_clear_are_you_on_the_take_away_fr__c" label="Not so clear"  text="Not so clear" change="{!c.doChange}"/>
+                     </div>
+                      <label><b>5.	Do you have any other comments, questions or concerns?</b></label> 
+                      <div>
+                       <lightning:textarea name="X5_Do_you_have_any_other_comments_quest__c" label="" onchange="{!c.doChange}"/>
+                      </div>
+                  <div class="slds-m-top_medium">
+                     <lightning:button  variant="brand" onclick="{!c.handleSubmit}" name="save" label="Save" />
+                  </div>-->
+                 <label><b>Were you satisfied with the information covered at the All Hands meeting?</b></label> 
+                 <div class="customRadioCls">
+                        <ui:inputRadio aura:id="r7" name="Were_you_satisfied_with_the_information__c" label="Yes"  text="Yes" change="{!c.doChange}"/>
+                        <ui:inputRadio aura:id="r8" name="Were_you_satisfied_with_the_information__c" label="No"  text="No" change="{!c.doChange}"/>
+                 </div>
+                      
+                 <label><b>Was the audio quality good?</b></label> 
+                 <div class="customRadioCls">
+                        <ui:inputRadio aura:id="r9" name="Was_the_audio_quality_good__c" label="Yes"  text="Yes" change="{!c.doChange}"/>
+                        <ui:inputRadio aura:id="r10" name="Was_the_audio_quality_good__c" label="No"  text="No" change="{!c.doChange}"/>
+                 </div> 
+                 
+                 <label><b>Do you feel that the speakers were clear in the information they were trying to portray?</b></label> 
+                 <div class="customRadioCls">
+                        <ui:inputRadio aura:id="r11" name="Do_you_feel_that_the_speakers_were_clear__c" label="Yes"  text="Yes" change="{!c.doChange}"/>
+                        <ui:inputRadio aura:id="r12" name="Do_you_feel_that_the_speakers_were_clear__c" label="No"  text="No" change="{!c.doChange}"/>
+                 </div>
+                      
+                  <label><b>How often do you think these meetings should be held?</b></label> 
+                 <div class="customRadioCls">
+                        <ui:inputRadio aura:id="r13" name="How_often_do_you_think_these_meetings_sh__c" label="Monthly"  text="Monthly" change="{!c.doChange}"/>
+                        <ui:inputRadio aura:id="r14" name="How_often_do_you_think_these_meetings_sh__c" label="Quarterly"  text="Quarterly" change="{!c.doChange}"/>
+                		<ui:inputRadio aura:id="r15" name="How_often_do_you_think_these_meetings_sh__c" label="Bi- Annually"  text="Bi- Annually" change="{!c.doChange}"/>
+                        <ui:inputRadio aura:id="r16" name="How_often_do_you_think_these_meetings_sh__c" label="Annually"  text="Annually" change="{!c.doChange}"/>
+                
+                 </div>
+                      
+                      
+                 <label><b>What topic or information would you recommend for the next All Hands meeting?</b></label> 
+                 <div class="customRadioCls">
+                		    <lightning:textarea name="What_topic_or_information_would_you_reco__c" label="" onchange="{!c.doChange}"/>
+                 </div>     
+                      
+                  <!--     <label><b>How did you find the allhands</b></label> 
+                 <div class="customRadioCls">
+                        <ui:inputRadio aura:id="r13" name="How_did_you_find_the_allhands__c" label="Monthly"  text="Monthly" change="{!c.doChange}"/>
+                        <ui:inputRadio aura:id="r14" name="How_did_you_find_the_allhands__c" label="Quarterly"  text="Quarterly" change="{!c.doChange}"/>
+                		<ui:inputRadio aura:id="r15" name="How_did_you_find_the_allhands__c" label="Bi- Annually"  text="Bi- Annually" change="{!c.doChange}"/>
+                
+                 </div>-->
+                      
+                      <div class="slds-m-top_medium">
+                     <lightning:button  variant="brand" onclick="{!c.handleSubmit}" name="save" label="Save" />
+                  </div> 
+               </div>
+            </div>
+             </div>
+         </aura:if>
+         <aura:if isTrue="{!v.surveyCompleted}">
+            <h1>Thank you</h1>
+         </aura:if>
+      </div>
+   </lightning:card>
+</aura:component>

@@ -1,0 +1,17 @@
+<apex:page standardController="lead" recordSetVar="items" >
+    <apex:form id="pp">
+    <apex:selectList size="1" value="{!filterid}">
+        <apex:selectOptions value="{!listviewoptions}">
+            </apex:selectOptions>
+        <apex:actionSupport event="onchange" reRender="pp"/>
+          </apex:selectList>
+         <apex:pageBlock title="leadslist"  >
+        <apex:pageblocktable value="{!items}" var="a">
+             <apex:column value="{!a.lastname}"/>
+             <apex:column value="{!a.firstname}"/>
+             <apex:column value="{!a.leadsource}"/>
+             <apex:column value="{!a.phone}"/>
+             </apex:pageblocktable>
+            </apex:pageBlock>
+         </apex:form>
+</apex:page>

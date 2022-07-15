@@ -1,0 +1,38 @@
+<apex:page controller="sobject_exe">
+    <apex:sectionHeader title="account_contacts_opportunity"/>
+    <apex:form >
+         <apex:tabPanel >
+             <apex:tab label="account" labelWidth="300" >
+           <apex:pageBlock title="account contact and opportunity block " >
+       <apex:pageBlockSection title="account section">
+        <apex:inputText value="{!acc.name}"/>
+           <apex:inputText value="{!acc.phone}"/>
+           <apex:inputText value="{!acc.industry}"/>
+           <apex:inputText value="{!acc.fax}"/>
+        </apex:pageBlockSection>
+                 </apex:pageBlock>
+                 </apex:tab>
+             <apex:tab label="contact" labelWidth="300" >
+                 <apex:pageBlock >
+       <apex:pageBlockSection title="contact section">
+        <apex:inputText value="{!con.firstname}"/>
+           <apex:inputText value="{!con.lastname}"/>
+           <apex:inputText value="{!con.phone}"/>
+           <apex:inputText value="{!con.fax}"/>
+        </apex:pageBlockSection> 
+                     </apex:pageBlock>
+                 </apex:tab>
+             <apex:tab label="opportunity" labelWidth="300" >
+                 <apex:pageBlock >
+       <apex:pageBlockSection title="opportunity section">
+        <apex:inputText value="{!opp.name}"/>
+           <apex:inputText value="{!opp.amount}"/>
+           <apex:inputText value="{!opp.stagename}"/>
+           <apex:inputText value="{!opp.closedate}"/>
+        </apex:pageBlockSection> 
+                     </apex:pageBlock>
+                 </apex:tab>
+              </apex:tabPanel>
+            
+    </apex:form>
+</apex:page>

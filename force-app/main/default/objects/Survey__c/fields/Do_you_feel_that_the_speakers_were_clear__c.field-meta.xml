@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Do_you_feel_that_the_speakers_were_clear__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <label>Do you feel that the speakers were clear</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

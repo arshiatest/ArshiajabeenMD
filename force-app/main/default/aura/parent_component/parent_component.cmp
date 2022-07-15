@@ -1,0 +1,7 @@
+<aura:component >
+    <aura:attribute name="firstname" type="string" />
+    <aura:attribute name="lastname" type="string" />
+    <c:childcomponent description="first value"/> <br/><br/>
+    <c:childcomponent description="this is child value" /><br/><br/>
+    <c:childcomponent description="{!v.firstname+v.lastname}" />
+</aura:component>

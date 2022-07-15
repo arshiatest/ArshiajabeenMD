@@ -1,0 +1,24 @@
+<apex:page controller="dml2">
+    <apex:form >
+    <apex:pagemessages >
+        </apex:pagemessages>
+        <apex:pageblock >
+            <apex:pageblockbuttons location="top">
+            <apex:commandButton value="create" action="{!create}"/>
+                <apex:commandButton value="cancel" action="{!cancel}"/>
+            </apex:pageblockbuttons>
+        <apex:pageBlockSection title="account">
+            <apex:inputfield value="{!acc.name}"/>
+            <apex:inputfield value="{!acc.industry}"/>
+            <apex:inputfield value="{!acc.phone}"/>
+            <apex:inputfield value="{!acc.type}"/>
+        </apex:pageBlockSection>
+            <apex:pageBlockSection title="contact">
+            <apex:inputfield value="{!con.firstname}"/>
+            <apex:inputfield value="{!con.lastname}"/>
+            <apex:inputfield value="{!con.email}"/>
+            <apex:inputfield value="{!con.phone}"/>
+        </apex:pageBlockSection>
+            </apex:pageblock>
+    </apex:form>
+</apex:page>

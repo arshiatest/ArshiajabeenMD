@@ -1,0 +1,10 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">Hi&nbsp; {{{light__c.Name}}}<br />
+&nbsp; &nbsp;{{{light__c.age__c}}}<br />
+&nbsp; {{{light__c.city__c}}}<br />
+&nbsp; {{{light__c.amount__c}}}<br />
+&nbsp; {{{light__c.country__c}}}
+</body></html>

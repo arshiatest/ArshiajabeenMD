@@ -1,0 +1,17 @@
+<apex:page sidebar="false" showHeader="false" > 
+    <apex:includeLightning />
+    
+    <div id="lightning" />
+    
+    <script>
+    // var urlParams = new URLSearchParams(window.location.search);
+    $Lightning.use("c:newtabletest", function() {
+        $Lightning.createComponent("c:newtable",
+                                   { },
+                                   "lightning",
+                                   function(cmp) {
+                                       // do some stuff
+                                   });
+    });
+    </script>
+</apex:page>

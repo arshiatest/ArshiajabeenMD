@@ -1,0 +1,3 @@
+<apex:page controller="task7_strings">
+    names = {!names}
+</apex:page>

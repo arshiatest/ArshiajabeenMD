@@ -1,0 +1,15 @@
+<apex:page controller="task16_acc">
+    <apex:form >
+    <apex:pageblock >
+        <apex:pageblocksection columns="1">
+        <apex:outputText >name</apex:outputText>
+            <apex:inputtext value="{!name}"/>
+        </apex:pageblocksection>
+        <apex:pageblocksection columns="1">
+        <apex:outputText >industry</apex:outputText>
+            <apex:inputtext value="{!industry}"/>
+        </apex:pageblocksection>
+        <apex:commandButton value="insert" action="{!call}"/>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

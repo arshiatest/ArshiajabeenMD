@@ -1,0 +1,9 @@
+<apex:page controller="task6_productlist">
+    <apex:pageblock >
+    <apex:pageBlockTable value="{!newlist}" var="n">
+        <apex:column value="{!n.prname}"/>
+        <apex:column value="{!n.price}" />
+        <apex:column value="{!n.quantity}"/>
+        </apex:pageBlockTable>
+    </apex:pageblock>
+</apex:page>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X3_How_relevant_is_the_material_to_your__c</fullName>
+    <externalId>false</externalId>
+    <label>How relevant is the material to your</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Extremely relevant</fullName>
+                <default>false</default>
+                <label>Extremely relevant</label>
+            </value>
+            <value>
+                <fullName>Not so relevant</fullName>
+                <default>false</default>
+                <label>Not so relevant</label>
+            </value>
+            <value>
+                <fullName>Somewhat relevant</fullName>
+                <default>false</default>
+                <label>Somewhat relevant</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

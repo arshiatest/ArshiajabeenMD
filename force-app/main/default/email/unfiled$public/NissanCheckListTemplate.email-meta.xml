@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>NissanCheckList</letterhead>
+    <name>NissanCheckListTemplate</name>
+    <style>products</style>
+    <subject>Nissan Checklist Deatils</subject>
+    <textOnly>&lt;b&gt;name&lt;/b&gt; :{!light__c.name__c}
+&lt;b&gt;age&lt;/b&gt;:{!light__c.age__c}
+&lt;b&gt;city&lt;/b&gt;:{!light__c.city__c}
+&lt;b&gt;Area&lt;/b&gt;:{!light__c.area__c}
+&lt;b&gt;Country&lt;/b&gt;:{!light__c.country__c}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

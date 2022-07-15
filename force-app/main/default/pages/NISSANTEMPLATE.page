@@ -1,0 +1,35 @@
+<apex:page Controller="NissanTempController"  >
+    <apex:form >
+<apex:pageBlock >
+<apex:pageBlockSection columns="1">
+
+<!--<apex:inputField Value="{!li.age__c}"/>
+    <apex:inputField Value="{!li.Email__c}"/>-->
+   
+    <apex:pageBlockTable value="{!FAlist}"  var="FA" >
+                        
+               
+            <apex:column headervalue="Name">
+                <apex:outputText value="{!FA.Name}" />
+            </apex:column>
+            <apex:column headervalue="AGE">
+                <apex:outputText value="{!FA.age__c}" />
+            </apex:column>
+            <apex:column headervalue="EMAIL">
+                <apex:outputText value="{!FA.email__c}" />
+            </apex:column>
+           
+                         
+               
+                      </apex:pageBlockTable>
+                      
+
+</apex:pageBlockSection>
+    <apex:pageBlockButtons location="bottom" >
+                        <apex:commandButton value="Save" action="{!sendmail}" />
+                        
+
+                    </apex:pageBlockButtons>-->
+</apex:pageBlock>
+        </apex:form>
+</apex:page>

@@ -1,0 +1,17 @@
+<apex:page controller="soql_ex2">
+ <apex:form >
+    <apex:pageBlock >
+        <apex:pageBlockTable value="{!wrapper}" var="w">
+            <apex:column >
+               <apex:facet name="header" ><apex:inputCheckbox /></apex:facet>
+          <apex:inputCheckbox value="{!w.flag}"/>
+        </apex:column>
+        <apex:column value="{!w.acc.id}"/>
+            <apex:column value="{!w.acc.name}"/>
+            <apex:column value="{!w.acc.phone}"/>
+            <apex:column value="{!w.acc.rating}"/>
+            <apex:column value="{!w.acc.industry}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+     </apex:form>
+</apex:page>

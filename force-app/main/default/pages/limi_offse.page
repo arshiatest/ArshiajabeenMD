@@ -1,0 +1,19 @@
+<apex:page controller="limi_offse">
+    <apex:form >
+    <apex:selectList size="1" value="{!selected}">
+         <apex:selectOption itemLabel="--none--" itemValue=""/>
+        <apex:selectOption itemLabel="hot" itemValue="hot"/>
+        <apex:selectOption itemLabel="warm" itemValue="warm"/>
+        <apex:selectOption itemLabel="cold" itemValue="cold"/>
+        <apex:actionSupport event="onchange" action="{!show}" reRender="pp"/>
+        </apex:selectList>
+         <apex:pageBlock title="list of records" id="pp">
+        <apex:pageBlockTable value="{!acts}" var="a" >
+        <apex:column value="{!a.id}"/>
+            <apex:column value="{!a.name}"/>
+            <apex:column value="{!a.type}"/>
+            <apex:column value="{!a.rating}"/>
+        </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

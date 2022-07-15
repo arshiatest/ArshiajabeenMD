@@ -1,0 +1,6 @@
+<apex:page controller="task2_oppo">
+    name: {!opp.name}<br/>
+    amount: {!opp.amount}<br/>
+    stagename : {!opp.stagename}<br/>
+    closedate : {!opp.closedate}
+</apex:page>

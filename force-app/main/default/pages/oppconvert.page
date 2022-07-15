@@ -1,0 +1,14 @@
+<apex:page standardController="opportunity" extensions="oppconvert" recordSetVar="items"  >
+    <apex:form >
+    <apex:pageBlock >
+       <apex:pageblockbuttons >
+        <apex:commandButton value="convert" action="{!convertopp}"/>
+        </apex:pageblockbuttons>
+        <apex:pageBlockTable value="{!opps}" var="o">
+        <apex:column value="{!o.amount}"/>
+            <apex:column value="{!o.stagename}"/>
+        <apex:column value="{!o.closedate}"/>
+        </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

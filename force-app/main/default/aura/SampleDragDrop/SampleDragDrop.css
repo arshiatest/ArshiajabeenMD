@@ -1,0 +1,47 @@
+.THIS .dnd-table-parent {
+    display: flex;
+}
+
+.THIS .dnd-table{
+    display : table;
+    border: 1px solid Black;
+}
+
+.THIS .dnd-table-row {
+    display:table-row;
+}
+
+.THIS .dnd-table-cell {
+    border: 1px solid #c0d6e4;
+    padding: 10px;
+    display: table-cell;
+}
+
+.THIS .dnd-recipient-table {
+    padding: 20px;
+}
+.THIS .uiLabel{
+    padding-right: 5px;
+}
+.THIS.customRadioCls{
+    display : inline-block !important;
+}
+.THIS .button{
+    background-color:deepskyblue;
+     border: 1px solid transparent;
+}
+.THIS .ColorBlue {
+    background-color: rgb(135,206,250);
+}
+.THIS.test1{
+ margin-top: -15%;
+    padding-left : 65%;
+}
+
+.THIS.chubbybaby { 
+    font-weight: bold;
+	background-color: solid #c0d6e4;
+    padding: 10px;
+    font-size: 25px;
+    
+}

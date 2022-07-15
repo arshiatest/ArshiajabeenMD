@@ -1,0 +1,21 @@
+<apex:page controller="rating_acc">
+    <style>
+    .box{
+        width:150px;
+        }
+    </style>
+    <apex:form >
+    <apex:pageBlock >
+        <apex:outputLabel >rating:</apex:outputLabel>
+        <apex:selectList size="1" value="{!selected}" styleClass="box">
+        <apex:selectOptions value="{!rating}"></apex:selectOptions>
+            <apex:actionSupport event="onchange" action="{!show}" rerender="one"/>
+        </apex:selectList>
+        <apex:pageblocktable value="{!acts}" var="a" id="one">
+        <apex:column value="{!a.id}"/>
+            <apex:column value="{!a.name}"/>
+            <apex:column value="{!a.rating}"/>
+        </apex:pageblocktable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

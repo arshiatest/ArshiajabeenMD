@@ -1,0 +1,30 @@
+<apex:page controller="contactsavearshia" sidebar="false" showHeader="false">
+  <apex:form >
+      <apex:pageBlock title="newcontact" id="pb1">
+          <apex:pageBlockSection columns="3">
+              <apex:inputField value="{!con.firstname}"/>
+             <apex:inputField value="{!con.lastname}"/>  
+              <apex:inputfield value="{!con.email}"/>
+          </apex:pageBlockSection>
+           <apex:pageBlockButtons >
+          <apex:commandButton action="{!save}" value="save"/>
+          <apex:commandButton action="{!cancel}" value="cancel"/>
+          </apex:pageBlockButtons> 
+      </apex:pageBlock>
+      <apex:pageBlock title="listofcontacts" id="pb2">
+           <apex:pageBlockSection >
+          <apex:pageblocktable value="{!listcont}" var="cons">
+           <apex:column value="{!cons.firstname}"/>
+           </apex:pageblocktable>
+           </apex:pageBlockSection>
+      
+      <apex:pageBlockSection >
+      <apex:commandButton value="search" action="{!searchcontact}"/>
+      <apex:inputText value="{!searchtext}"/>
+      <apex:pageblocktable value="{!listcon}" var="cons">
+           <apex:column value="{!cons.firstname}"/>
+           </apex:pageblocktable>
+      </apex:pageBlockSection>
+      </apex:pageBlock>
+  </apex:form> 
+</apex:page>

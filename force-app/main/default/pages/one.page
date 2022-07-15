@@ -1,0 +1,9 @@
+<apex:page controller="one">
+    <apex:form id="one">
+    <apex:selectList size="1" value="{!selected}">
+        <apex:selectOptions value="{!options}"></apex:selectOptions>
+        <apex:actionSupport event="onchange" reRender="one" />
+        </apex:selectList><br/> <br/>
+        you have selected: {!selected}
+    </apex:form>
+</apex:page>

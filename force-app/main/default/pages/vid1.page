@@ -1,0 +1,43 @@
+<apex:page controller="vid1">
+    <apex:form >
+        text: <apex:inputText /> <br/><br/>
+        text secret: <apex:inputSecret /> <br/><br/>
+        text hidden: <apex:inputHidden /> <br/><br/>
+        check box: <apex:inputCheckbox /> <br/><br/>
+        ===========radio buttons=======
+        <apex:selectRadio value="{!val1}">
+            <apex:selectOption itemLabel="male" itemvalue="male"/>
+            <apex:selectOption itemLabel="female" itemvalue="female"/>
+        </apex:selectRadio>
+        <apex:commandButton value="submit" action="{!submit}" /><br/><br/>
+        <apex:commandButton value="reset" action="{!reset}"/> <br/><br/>
+        you have selected : {!val1} <br/><br/>
+        =========check boxes================
+        <apex:selectCheckboxes value="{!options1}">
+            <apex:selectOption itemLabel="java" itemValue="jdbc"/>
+           <apex:selectOption itemLabel="php" itemValue="php1"/>
+            <apex:selectOption itemLabel="sf" itemValue="sfdc"/>
+        </apex:selectCheckboxes>
+        <apex:commandButton value="submit" action="{!submit}" /><br/><br/>
+         <apex:commandButton value="reset" action="{!reset}"/> <br/><br/>
+        you have selected : {!options1}<br/><br/>
+        ========picklist============================== <br/><br/>
+        <apex:selectList size="1" value="{!val2}" >
+            <apex:selectOption itemLabel="java" itemValue="jdbc"/>
+           <apex:selectOption itemLabel="php" itemValue="php1"/>
+            <apex:selectOption itemLabel="sf" itemValue="sfdc"/>
+        </apex:selectList> <br/><br/>
+        <apex:commandButton value="submit" action="{!submit}" /><br/><br/>
+         <apex:commandButton value="reset" action="{!reset}"/> <br/><br/>
+        you have selected : {!val2}<br/><br/>
+        ======multiselect picklist========================== <br/><br/>
+        <apex:selectList multiselect="true" value="{!options2}" >
+            <apex:selectOption itemLabel="java" itemValue="jdbc"/>
+           <apex:selectOption itemLabel="php" itemValue="php1"/>
+            <apex:selectOption itemLabel="sf" itemValue="sfdc"/>
+        </apex:selectList> <br/><br/>
+        <apex:commandButton value="submit" action="{!submit}" /><br/><br/>
+         <apex:commandButton value="reset" action="{!reset}"/> <br/><br/>
+        you have selected : {!options2}<br/><br/>
+    </apex:form>
+</apex:page>

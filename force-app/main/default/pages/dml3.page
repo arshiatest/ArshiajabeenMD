@@ -1,0 +1,34 @@
+<apex:page controller="dml3">
+    <apex:form >
+    <apex:pageblock >
+        <apex:pageBlockButtons >
+        <apex:commandButton value="save" action="{!save}"/>
+            <apex:commandbutton value="cancel" action="{!cancel}"/>
+        </apex:pageBlockButtons>
+        <apex:pageblocksection title="account">
+            <apex:inputfield value="{!acc.name}"/>
+            <apex:inputfield value="{!acc.industry}"/>
+            <apex:inputfield value="{!acc.rating}"/>
+            <apex:inputfield value="{!acc.type}"/>
+        </apex:pageblocksection>
+        <apex:pageblocktable value="{!cons}" var="c" id="one">
+            <apex:column headerValue="firstname">
+                <apex:inputfield value="{!c.firstname}"/>
+            </apex:column>
+            <apex:column headerValue="lastname">
+                <apex:inputfield value="{!c.lastname}"/>
+            </apex:column>
+            <apex:column headerValue="email">
+                <apex:inputfield value="{!c.email}"/>
+            </apex:column>
+            <apex:column headerValue="phone">
+                <apex:inputfield value="{!c.phone}"/>
+            </apex:column>
+            <apex:column headerValue="action">
+                <apex:commandButton value="add" action="{!add}" rerender="one"/>
+            </apex:column>
+        
+        </apex:pageblocktable>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

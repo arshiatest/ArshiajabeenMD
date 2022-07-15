@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>X2_How_do_you_feel_about_the_information__c</name>
+    <picklistValues>
+        <masterLabel>About the right amount of information</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Too little information</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Too much information</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

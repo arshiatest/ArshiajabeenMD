@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>How_clear_are_you_on_the_take_away_fr__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <label>How clear are you on the take away fr</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

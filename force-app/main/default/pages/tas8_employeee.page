@@ -1,0 +1,29 @@
+<apex:page controller="task8_employeemap">
+    <apex:form >
+    <apex:pageblock >
+        <apex:pageblocksection >
+        <apex:pageblocksectionitem >
+            <apex:outputLabel value="emp_no"/>
+            <apex:inputtext value="{!emp_no}"/>
+            </apex:pageblocksectionitem>
+             <apex:pageblocksectionitem >
+            <apex:outputLabel value="name"/>
+            <apex:inputtext value="{!name}"/>
+            </apex:pageblocksectionitem>
+             <apex:pageblocksectionitem >
+            <apex:outputLabel value="salary"/>
+            <apex:inputtext value="{!salary}"/>
+            </apex:pageblocksectionitem>
+        </apex:pageblocksection>
+        <apex:pageBlockButtons location="top">
+        <apex:commandButton value="create" action="{!create}"/>
+        </apex:pageBlockButtons>
+        <apex:pageBlockTable value="{!empmap}" var="e">
+            <apex:column value="{!e}"/>
+            <apex:column value="{!empmap[e].emp_no}" />
+            <apex:column value="{!empmap[e].salary}" />
+            <apex:column value="{!empmap[e].name}" />
+        </apex:pageBlockTable>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

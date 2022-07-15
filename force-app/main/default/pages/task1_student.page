@@ -1,0 +1,6 @@
+<apex:page controller="task1_student">
+    <h2>student details are:</h2><br/>
+    std name: {!stdname}<br/>
+    age: {!age}<br/>
+    branch:{!branch}
+</apex:page>

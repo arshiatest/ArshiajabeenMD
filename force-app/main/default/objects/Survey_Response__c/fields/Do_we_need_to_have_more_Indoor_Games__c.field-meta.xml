@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Do_we_need_to_have_more_Indoor_Games__c</fullName>
+    <externalId>false</externalId>
+    <label>Do we need to have more Indoor Games</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Carrom Board</fullName>
+                <default>false</default>
+                <label>Carrom Board</label>
+            </value>
+            <value>
+                <fullName>Chess</fullName>
+                <default>false</default>
+                <label>Chess</label>
+            </value>
+            <value>
+                <fullName>Basket Ball</fullName>
+                <default>false</default>
+                <label>Basket Ball</label>
+            </value>
+            <value>
+                <fullName>Tennis</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Tennis</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

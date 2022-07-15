@@ -1,0 +1,5 @@
+<apex:page controller="task1_movie">
+    name: {!moviename}<br/>
+    no. of ticks: {!ticketsavailable}<br/>
+    show :{!tnow}
+</apex:page>

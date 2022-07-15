@@ -1,0 +1,9 @@
+<apex:page controller="task6_employeelist">
+    <apex:pageblock title="emplist">
+    <apex:pageBlockTable value="{!emplist}" var="e">
+        <apex:column value="{!e.empname}"/>
+        <apex:column value="{!e.salary}" />
+        <apex:column value="{!e.exp}"/>
+        </apex:pageBlockTable>
+    </apex:pageblock>
+</apex:page>

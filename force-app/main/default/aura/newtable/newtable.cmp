@@ -1,0 +1,8 @@
+<aura:component  access="global" implements="lightning:isUrlAddressable"   >
+	<!--<aura:attribute name="firstName" type="String" />-->
+    hello page2
+    <aura:attribute name="res" type="object[]" />
+   <!-- <aura:handler event="c:sampledragdropevent" action="{!c.met1}" />-->
+    the result is : {!v.res}
+    
+</aura:component>

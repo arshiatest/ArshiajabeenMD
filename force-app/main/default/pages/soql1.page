@@ -1,0 +1,12 @@
+<apex:page controller="soql1" >
+    <apex:form >
+    <apex:pageBlock title="accounts">
+        <apex:pageblocktable value="{!acts}" var="a">
+        <apex:column value="{!a.id}"/>
+            <apex:column value="{!a.name}"/>
+            <apex:column value="{!a.type}"/>
+            <apex:column value="{!a.rating}"/>
+        </apex:pageblocktable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

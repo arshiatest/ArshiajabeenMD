@@ -1,0 +1,27 @@
+<apex:page controller="pageref">
+    <apex:form >
+    <apex:pageblock title="edit page">
+        <apex:pageblockbuttons >
+        <apex:commandButton value="save" action="{!save}"/>
+        </apex:pageblockbuttons>
+        <apex:pageBlockSection >
+        <apex:pageblocksectionitem >
+            <apex:outputLabel value="name"/>
+            <apex:inputText value="{!name}"/>
+            </apex:pageblocksectionitem>
+            <apex:pageblocksectionitem >
+            <apex:outputLabel value="age"/>
+            <apex:inputText value="{!age}"/>
+            </apex:pageblocksectionitem>
+            <apex:pageblocksectionitem >
+            <apex:outputLabel value="income"/>
+            <apex:inputText value="{!income}"/>
+            </apex:pageblocksectionitem>
+            <apex:pageblocksectionitem >
+            <apex:outputLabel value="course"/>
+            <apex:inputText value="{!course}"/>
+            </apex:pageblocksectionitem>
+        </apex:pageBlockSection>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

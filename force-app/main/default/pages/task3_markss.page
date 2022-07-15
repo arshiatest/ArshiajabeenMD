@@ -1,0 +1,4 @@
+<apex:page controller="task3_marks">
+    marks :
+  {!marks}
+</apex:page>

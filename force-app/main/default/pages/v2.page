@@ -1,0 +1,19 @@
+<apex:page sidebar="false" standardController="contact" >
+  <h1>hello welcome onboard</h1> <br/>
+  <b>my name is {!$User.FirstName}</b><br/>
+  our logo:
+  <apex:image url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHTxK1YTVFOW8q5CKL1hqTWMTrnNqP5Dxkk2NZgSYCv9yc8HmAMA" height="200" width="300"/>
+  <apex:form >
+  <apex:pageBlock title="enter details here" >
+  <apex:pageBlockSection columns="3">
+  <apex:inputField value="{!contact.lastname}"/>
+  <apex:inputField value="{!contact.email}"/>
+  <apex:inputField value="{!contact.phone}"/>
+  </apex:pageBlockSection>
+  <apex:pageBlockButtons >
+  <apex:commandButton value="submit" action="{!save}"/>
+  <apex:commandButton value="don't submit" action="{!cancel}"/>
+  </apex:pageBlockButtons>
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>

@@ -1,0 +1,5 @@
+<apex:page controller="tas2_account">
+    name: {!a.name}<br/>
+    industry: {!a.industry}<br/>
+    phone: {!a.phone}
+</apex:page>

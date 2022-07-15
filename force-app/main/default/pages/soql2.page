@@ -1,0 +1,16 @@
+<apex:page controller="soql2">
+    <apex:form >
+    <apex:pageblock title="accounts wrap">
+        <apex:pageBlockTable value="{!wraplist}" var="p">
+             <apex:column >
+            <apex:facet name="header"><apex:outputLabel >check</apex:outputLabel></apex:facet>
+             <apex:inputCheckbox value="{!p.flag}"/>
+            </apex:column>
+             <apex:column value="{!p.acc.id}"/>
+             <apex:column value="{!p.acc.name}"/>
+             <apex:column value="{!p.acc.rating}"/>
+             <apex:column value="{!p.acc.industry}"/>
+        </apex:pageBlockTable>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

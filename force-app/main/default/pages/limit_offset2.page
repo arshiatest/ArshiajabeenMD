@@ -1,0 +1,16 @@
+<apex:page controller="limit_offset2">
+    <apex:form >
+   <apex:selectList size="1" value="{!selected}">
+       <apex:selectOptions value="{!options}"/>
+        <apex:actionSupport event="onchange" action="{!show}" reRender="pp"/>
+        </apex:selectList> 
+        <apex:pageBlock title="list of records" id="pp">
+       <apex:pageBlockTable value="{!acts}" var="a" >
+        <apex:column value="{!a.id}"/>
+            <apex:column value="{!a.name}"/>
+            <apex:column value="{!a.type}"/>
+            <apex:column value="{!a.rating}"/>
+        </apex:pageBlockTable> 
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

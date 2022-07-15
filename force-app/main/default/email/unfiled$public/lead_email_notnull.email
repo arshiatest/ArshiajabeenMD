@@ -1,0 +1,9 @@
+hello  {!Lead.FirstName} {!Lead.LastName}
+
+we have received your deatils 
+
+name: {!Lead.FirstName}
+phone no. {!Lead.Phone}
+email: {!Lead.Email}
+
+thankyou.

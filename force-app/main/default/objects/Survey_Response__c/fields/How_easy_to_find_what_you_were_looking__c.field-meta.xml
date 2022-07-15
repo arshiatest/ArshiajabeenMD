@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>How_easy_to_find_what_you_were_looking__c</fullName>
+    <externalId>false</externalId>
+    <label>How easy to find what you were looking?</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Extremely easy</fullName>
+                <default>false</default>
+                <label>Extremely easy</label>
+            </value>
+            <value>
+                <fullName>Very easy</fullName>
+                <default>false</default>
+                <label>Very easy</label>
+            </value>
+            <value>
+                <fullName>Somewhat easy</fullName>
+                <default>false</default>
+                <label>Somewhat easy</label>
+            </value>
+            <value>
+                <fullName>Not so easy</fullName>
+                <default>false</default>
+                <label>Not so easy</label>
+            </value>
+            <value>
+                <fullName>Not at all easy</fullName>
+                <default>false</default>
+                <label>Not at all easy</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,29 @@
+<apex:page >
+    
+    <script>
+    function callme(){
+      alert('this is callme');
+    }
+    function showme(){
+    alert('this is show me');
+    }
+    var aval=0;
+    function calldata(){
+        aval=10;
+        document.write(aval);
+    }
+    function showdata(){
+        aval=30;
+        document.write(aval);
+    }
+
+   </script>
+        <apex:form >
+          <!--  <apex:inputtext onchange= "callme()"/> <br/>
+            <apex:inputtext onblur="showme()"/> <br/> -->
+            <apex:commandButton value="submit" onclick="callme()" oncomplete="calldata()"/> <br/>
+            <apex:commandButton value="cancel" onclick="showme()" oncomplete="showdata()"/>
+           <!-- <apex:commandbutton value="cancel"  onmouseout="showme()"/> <br/>
+             <apex:commandbutton value="cancel"  onmouseout="showme()"/> <br/> -->
+ </apex:form>
+ </apex:page>

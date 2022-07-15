@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>How_engaging_was_your_instructor__c</fullName>
+    <externalId>false</externalId>
+    <label>How engaging was your instructor?</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Extremely engaging</fullName>
+                <default>false</default>
+                <label>Extremely engaging</label>
+            </value>
+            <value>
+                <fullName>Not so engaging</fullName>
+                <default>false</default>
+                <label>Not so engaging</label>
+            </value>
+            <value>
+                <fullName>Somewhat engaging</fullName>
+                <default>false</default>
+                <label>Somewhat engaging</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

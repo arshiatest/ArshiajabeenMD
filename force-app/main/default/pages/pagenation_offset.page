@@ -1,0 +1,16 @@
+<apex:page controller="pagenation_offset" >
+    <apex:form >
+    <apex:pageblock >
+        <apex:pageblockbuttons location="top">
+        <apex:commandButton value="previous" action="{!previous}" rendered="{! count>0}"/>
+            <apex:commandButton value="next" action="{!next}" rendered="{! count+5 <size}"/>
+        </apex:pageblockbuttons>
+        <apex:pageBlockTable value="{!opps}" var="a">
+        <apex:column value="{!a.id}"/>
+            <apex:column value="{!a.stagename}"/>
+            <apex:column value="{!a.amount}"/>
+        </apex:pageBlockTable>
+       <center> {! (count+1)}-{!(count+5)} of {!size}</center>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

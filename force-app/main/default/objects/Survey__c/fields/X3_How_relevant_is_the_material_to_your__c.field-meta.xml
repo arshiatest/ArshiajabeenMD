@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X3_How_relevant_is_the_material_to_your__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <label>How relevant is the material to your</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

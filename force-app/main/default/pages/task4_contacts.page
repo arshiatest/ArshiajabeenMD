@@ -1,0 +1,9 @@
+<apex:page controller="task4_contacts">
+    <apex:pageblock >
+    <apex:pageBlockTable value="{!cons}" var="a">
+        <apex:column value="{!a.firstname}"/>
+        <apex:column value="{!a.lastname}"/>
+        <apex:column value="{!a.phone}"/>
+        </apex:pageBlockTable>
+    </apex:pageblock>
+</apex:page>

@@ -1,0 +1,25 @@
+<apex:page controller="vid3">
+    <apex:form >
+    <apex:pageBlock title="calculate" >
+        <apex:pageBlockButtons location="top">
+        <apex:commandButton value="add" action="{!add}"/>
+             <apex:commandButton value="mul" action="{!mul}"/>
+             <apex:commandButton value="cancel" action="{!cancel}"/>
+        </apex:pageBlockButtons>
+        <apex:pageBlockSection columns="1">
+            <apex:pageBlockSectionItem >
+            <apex:outputLabel value="aval"/>
+            <apex:inputText value="{!aval}"/>
+                </apex:pageBlockSectionItem>
+             <apex:pageBlockSectionItem >
+            <apex:outputLabel value="bval"/>
+            <apex:inputText value="{!bval}"/>
+                </apex:pageBlockSectionItem>
+             <apex:pageBlockSectionItem >
+            <apex:outputLabel value="result"/>
+            <apex:outputlabel value="{!result}"/>
+                </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+       </apex:pageBlock>
+    </apex:form>
+</apex:page>

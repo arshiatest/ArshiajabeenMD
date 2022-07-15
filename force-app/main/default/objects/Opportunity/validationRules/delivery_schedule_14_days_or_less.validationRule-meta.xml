@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>delivery_schedule_14_days_or_less</fullName>
+    <active>true</active>
+    <description>sets end date for initial delivery</description>
+    <errorConditionFormula>ispickval(StageName,&quot;closedwon&quot;) &amp;&amp; 
+(delivery_schedule_date__c - CloseDate)&gt;14</errorConditionFormula>
+    <errorDisplayField>CloseDate</errorDisplayField>
+    <errorMessage>dates of type delivery must be no later than 14 days after close date</errorMessage>
+</ValidationRule>

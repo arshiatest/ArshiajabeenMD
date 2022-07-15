@@ -1,0 +1,34 @@
+<apex:page controller="task7_studentdynamic">
+    <apex:form >
+        <apex:pageblock >
+       <apex:pageblocksection >
+       <apex:pageblocksectionitem >
+        <apex:outputLabel value="name"/>
+           <apex:inputtext value="{!name}"/>
+              </apex:pageblocksectionitem>
+           <apex:pageblocksectionitem >
+        <apex:outputLabel value="age"/>
+           <apex:inputtext value="{!age}"/>
+              </apex:pageblocksectionitem>
+           <apex:pageblocksectionitem >
+        <apex:outputLabel value="branch"/>
+           <apex:inputtext value="{!branch}"/>
+              </apex:pageblocksectionitem>
+           <apex:pageblocksectionitem >
+        <apex:outputLabel value="doj"/>
+           <apex:inputtext value="{!doj}"/>
+              </apex:pageblocksectionitem>
+            </apex:pageblocksection>
+            <apex:pageblockbuttons location="top">
+            <apex:commandButton value="submit" action="{!create}"/>
+             <apex:commandButton value="show" action="{!show}" />
+                 </apex:pageblockbuttons>
+            <apex:pageblocktable value="{!studentset1}" var="s" >
+                <apex:column headerValue="name" value="{!s['name']}"/>
+                <apex:column headervalue="age" value="{!s['age']}"/>
+                <apex:column headervalue="branch" value="{!s['branch']}"/>
+                <apex:column headervalue="doj"  value="{!s['doj']}"/>
+            </apex:pageblocktable>
+              </apex:pageblock>
+    </apex:form>
+</apex:page>

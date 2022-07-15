@@ -1,0 +1,26 @@
+<apex:page controller="field_dependancy">
+<style>
+    .box{
+    width:150px;
+    }
+    </style>
+    <apex:form >
+        <apex:pageblock >
+<apex:pageblocksection columns="1" >
+    <apex:pageblocksectionitem >
+    <apex:outputLabel value="cities"></apex:outputLabel>
+     <apex:selectList size="1" value="{!selected}" styleClass="box">
+        <apex:selectOptions value="{!cities}"></apex:selectOptions>
+         <apex:actionSupport event="onchange" action="{!show}" reRender="one"/>
+        </apex:selectList>                 
+    </apex:pageblocksectionitem>
+    <apex:pageblocksectionitem >
+    <apex:outputLabel value="places"></apex:outputLabel>
+     <apex:selectList size="1" styleClass="box" id="one">
+        <apex:selectOptions value="{!places}"></apex:selectOptions>
+        </apex:selectList>                 
+    </apex:pageblocksectionitem>
+    </apex:pageblocksection>
+            </apex:pageblock>
+</apex:form>
+</apex:page>

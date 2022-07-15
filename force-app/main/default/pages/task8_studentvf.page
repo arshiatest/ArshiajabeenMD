@@ -1,0 +1,24 @@
+<apex:page controller="task8_studentmap">
+    <apex:form >
+    <apex:pageblock >
+        <apex:pageblocksection >
+        <apex:pageblocksectionitem >
+            <apex:outputLabel value="name"/>
+                <apex:inputtext value="{!name}"/>
+            </apex:pageblocksectionitem>
+                    <apex:pageblocksectionitem >
+                        <apex:outputLabel value="phone"/>
+                <apex:inputtext value="{!phone}"/>
+            </apex:pageblocksectionitem>
+        </apex:pageblocksection>
+        <apex:pAGEBLOCKBUTTONS >
+        <apex:commandButton value="submit" action="{!create}"/>
+        </apex:pAGEBLOCKBUTTONS>
+        <apex:pageBlockTable value="{!studentmap}" var="s">
+            <apex:column value="{!s}"/>
+                         <apex:column value="{!studentmap[s]}"/>           
+        </apex:pageBlockTable>
+        </apex:pageblock>
+        
+    </apex:form>
+</apex:page>

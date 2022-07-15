@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>annaulrev</fullName>
+    <active>true</active>
+    <errorConditionFormula>And($Setup.hier1__c.flag__c,
+      AnnualRevenue &lt;50000
+)</errorConditionFormula>
+    <errorMessage>annual revenue cannot be less than 50000</errorMessage>
+</ValidationRule>

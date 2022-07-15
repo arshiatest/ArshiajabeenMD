@@ -1,0 +1,19 @@
+.THIS.customRadioCls{
+    display : inline-block !important;
+}
+.THIS .uiInput--radio{
+    padding:20px !important;
+    display : inline-block !important;
+}
+.THIS .uiLabel{
+    padding-right: 5px;
+}
+
+.THIS.droptarget {
+  float: left; 
+  width: 100px; 
+  height: 35px;
+  margin: 15px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}

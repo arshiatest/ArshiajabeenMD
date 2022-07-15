@@ -1,0 +1,6 @@
+<apex:page controller="task1_employee">
+    name: {!empname}<br/>
+    salary :{!salary}<br/>
+    experience : {!exp}
+    
+</apex:page>

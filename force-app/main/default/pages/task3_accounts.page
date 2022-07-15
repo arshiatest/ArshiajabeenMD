@@ -1,0 +1,9 @@
+<apex:page controller="task3_accounts">
+    <apex:pageblock >
+    <apex:pageblocktable title="list of accounts" value="{!acts}" var="a">
+        <apex:column value="{!a.name}"/>
+         <apex:column value="{!a.industry}"/>
+         <apex:column value="{!a.phone}"/>
+        </apex:pageblocktable>
+    </apex:pageblock>
+</apex:page>

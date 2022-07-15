@@ -1,0 +1,17 @@
+<apex:page controller="depend_picklist">
+    <style>
+    .box{
+        width:150px;
+        }
+    </style>
+<apex:form id="one">
+   
+    <apex:selectList size="1" value="{!selected}" styleClass="box">
+    <apex:selectOptions value="{!cities}"></apex:selectOptions>
+        <apex:actionSupport event="onchange" action="{!show}" reRender="one"/>
+    </apex:selectList><br/><br/>
+    <apex:selectList size="1"  styleClass="box">
+   <apex:selectOptions value="{!places}"></apex:selectOptions>
+    </apex:selectList>
+    </apex:form>
+</apex:page>

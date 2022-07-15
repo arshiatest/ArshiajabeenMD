@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>department__c</fullName>
+    <externalId>false</externalId>
+    <label>department</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>record_type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>-finance</fullName>
+                <default>false</default>
+                <label>-finance</label>
+            </value>
+            <value>
+                <fullName>-support</fullName>
+                <default>false</default>
+                <label>-support</label>
+            </value>
+            <value>
+                <fullName>-sales</fullName>
+                <default>false</default>
+                <label>-sales</label>
+            </value>
+            <value>
+                <fullName>-engineering</fullName>
+                <default>false</default>
+                <label>-engineering</label>
+            </value>
+            <value>
+                <fullName>-it</fullName>
+                <default>false</default>
+                <label>-it</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>-non technical position</controllingFieldValue>
+            <valueName>-finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>-non technical position</controllingFieldValue>
+            <valueName>-support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>-non technical position</controllingFieldValue>
+            <valueName>-sales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>-technical position</controllingFieldValue>
+            <valueName>-engineering</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>-technical position</controllingFieldValue>
+            <valueName>-it</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

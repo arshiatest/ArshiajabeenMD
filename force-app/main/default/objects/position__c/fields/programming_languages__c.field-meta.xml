@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>programming_languages__c</fullName>
+    <externalId>false</externalId>
+    <label>programming languages</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>-java</fullName>
+                <default>false</default>
+                <label>-java</label>
+            </value>
+            <value>
+                <fullName>-dot net</fullName>
+                <default>false</default>
+                <label>-dot net</label>
+            </value>
+            <value>
+                <fullName>-fortran</fullName>
+                <default>false</default>
+                <label>-fortran</label>
+            </value>
+            <value>
+                <fullName>-cobal</fullName>
+                <default>false</default>
+                <label>-cobal</label>
+            </value>
+            <value>
+                <fullName>-php</fullName>
+                <default>false</default>
+                <label>-php</label>
+            </value>
+            <value>
+                <fullName>-perl</fullName>
+                <default>false</default>
+                <label>-perl</label>
+            </value>
+            <value>
+                <fullName>-python</fullName>
+                <default>false</default>
+                <label>-python</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

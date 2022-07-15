@@ -1,0 +1,5 @@
+<apex:page controller="task2_case">
+    subject:{!c.subject}<br/>
+    origin : {!c.origin}<br/>
+    priority : {!c.priority}
+</apex:page>

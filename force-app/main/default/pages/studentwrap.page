@@ -1,0 +1,9 @@
+<apex:page controller="studentwraplist">
+    <apex:pageblock title="student list">
+    <apex:pageBlockTable value="{!wraplist}" var="w">
+        <apex:column headervalue="name" value="{!w.name}"/>
+        <apex:column headervalue="age" value="{!w.age}" />
+        <apex:column headervalue="dob" value="{!w.dob}"/>
+        </apex:pageBlockTable>
+    </apex:pageblock>
+</apex:page>

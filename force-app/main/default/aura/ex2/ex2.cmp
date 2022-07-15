@@ -1,0 +1,9 @@
+<aura:component >
+    <aura:attribute name="name" type="string" />
+    <aura:attribute name="branch" type="string" />
+    <aura:attribute name="age" type="integer" />
+    <br/> <br/>
+    name : {!v.name}<br/> <br/>
+    branch : {!v.branch} <br/> <br/>
+    age : {!v.age} <br/> <br/>
+</aura:component>

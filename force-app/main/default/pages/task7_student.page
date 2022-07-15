@@ -1,0 +1,10 @@
+<apex:page controller="task7_studentset">
+    <apex:pageblock >
+    <apex:pageblocktable value="{!studentset}" var="s">
+        <apex:column value="{!s['name']}"/>
+        <apex:column value="{!s['age']}"/>
+        <apex:column value="{!s['branch']}"/>
+        <apex:column value="{!s['doj']}"/>
+        </apex:pageblocktable>
+    </apex:pageblock>
+</apex:page>

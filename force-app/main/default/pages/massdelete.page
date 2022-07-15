@@ -1,0 +1,15 @@
+<apex:page standardController="lead" extensions="massdel" recordSetVar="items">
+    <apex:form >
+    <apex:pageblock >
+    <apex:pageblockbuttons location="top">
+        <apex:commandButton value="delete" action="{!delrecords}"/>
+         </apex:pageblockbuttons>
+        <apex:pageblocktable title="list of leads" value="{!leads}" var="a">
+        <apex:column value="{!a.firstname}"/>
+           <apex:column value="{!a.phone}"/>
+            <apex:column value="{!a.leadsource}"/>
+            <apex:column value="{!a.lastname}"/>
+        </apex:pageblocktable>
+    </apex:pageblock>
+        </apex:form>
+</apex:page>

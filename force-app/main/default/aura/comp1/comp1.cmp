@@ -1,0 +1,4 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" >
+    <lightning:navigation aura:id="navService"/>
+    <lightning:button label="SFDC Navigate to listener component" onclick="{!c.handleClick}"/>
+</aura:component>

@@ -1,0 +1,9 @@
+<aura:component >
+    <aura:attribute name="empname" type="string" />
+    <aura:attribute name="city" type="string" />
+    <aura:attribute name="place" type="string" />
+    <aura:handler name="init" value="{!this}" action="{!c.show}"/> 
+    {!v.empname}<br/><br/>
+    {!v.city}<br/><br/>
+    {!v.place}<br/><br/>
+</aura:component>

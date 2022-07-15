@@ -1,0 +1,33 @@
+<apex:page controller="dynamic">
+    <apex:form >
+    <apex:pageblock title="enter details">
+        <apex:pageblockbuttons location="top">
+        <apex:commandButton value="search" action="{!formquery}" />
+            </apex:pageblockbuttons>
+        <apex:pageBlockSection columns="1">
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="name"></apex:outputLabel>
+            <apex:inputtext value="{!selected1}"/>
+            </apex:pageBlockSectionItem>
+          <apex:pageBlockSectionItem >
+            <apex:outputLabel value="industry"></apex:outputLabel>
+            <apex:inputtext value="{!selected2}"/>
+            </apex:pageBlockSectionItem>
+     </apex:pageBlockSection>
+        </apex:pageblock>
+        <apex:pageblock title="details" mode="maindetail"  rendered="{! !ISNULL(wraplist)}">
+        <apex:pageblocktable value="{!wraplist}" var="p" >
+            <apex:column >
+                <apex:facet name="header"><apex:inputCheckbox /></apex:facet>
+                <apex:inputcheckbox value="{!p.flag}"></apex:inputcheckbox>
+            </apex:column>
+            <apex:column value="{!p.acc.id}"/>
+              <apex:column value="{!p.acc.name}"/>
+              <apex:column value="{!p.acc.industry}"/>
+              <apex:column value="{!p.acc.type}"/>
+              <apex:column value="{!p.acc.rating}"/>
+            </apex:pageblocktable>
+        </apex:pageblock>
+    
+    </apex:form>
+</apex:page>

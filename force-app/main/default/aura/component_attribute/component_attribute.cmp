@@ -1,0 +1,8 @@
+<aura:component  >
+    <aura:attribute name="empname" type="string" />
+    <aura:attribute name="salary" type="decimal" description="mention salary"/>
+    <aura:attribute name="age" type="decimal" default="26" />
+    {!v.empname}<br/><br/>
+    {!v.salary}<br/><br/>
+    {!v.age}
+</aura:component>

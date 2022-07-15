@@ -1,0 +1,24 @@
+<apex:page controller="multiselect">
+    <style>
+    .box{
+        height:150px;
+        width:150px;
+        }
+    </style>
+    <apex:form >
+        <apex:pageBlock title="block" id="one">
+    <apex:panelGrid columns="3">
+        <apex:selectList multiselect="true" styleClass="box" value="{!addfields}">
+        <apex:selectOptions value="{!leftside}"></apex:selectOptions>
+        </apex:selectList>
+        <apex:panelGrid columns="1"> <br/>
+        <apex:commandButton value="add" action="{!addele}" rerender="one"/>
+            <apex:commandButton value="del" action="{!delele}" rerender="one"/>
+        </apex:panelGrid>
+        <apex:selectList multiselect="true" styleClass="box" value="{!delfields}" >
+        <apex:selectOptions value="{!rightside}"></apex:selectOptions>
+        </apex:selectList>
+        </apex:panelGrid>
+            </apex:pageBlock>
+    </apex:form>
+</apex:page>

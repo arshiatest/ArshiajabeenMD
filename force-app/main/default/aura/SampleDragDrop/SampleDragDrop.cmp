@@ -1,0 +1,54 @@
+<aura:component  implements="force:appHostable,flexipage:availableForAllPageTypes">    
+    <aura:attribute name="result" type="object[]" />
+    <aura:registerevent name="navigate" type="c:sampledragdropevent"/>
+    <aura:attribute name="draggedDivID" type="String" access="private" />
+    <aura:attribute name="table1Data" type="Object[]" access="private" />
+    <aura:attribute name="table2Data" type="Object[]" access="private" />
+    <aura:handler name="init" value="this" action="{!c.doInit}" />
+    
+    <div class="chubbybaby">
+        <label> <center><b>Dell survey</b></center></label><br/>
+    </div>
+         <div >
+        <div class="slds-grid" >            
+            <div class="dnd-table" id="test" ondrop="{!c.handleDroptable1}" ondragover="{!c.allowDrop}">
+                <b>dell survey questions</b><br/><br/>
+                <aura:iteration items="{!v.table1Data}" var="tableRow">
+                    <div id="{!tableRow.queid}" class="dnd-table-row" draggable="true" ondragstart="{!c.handleDrag}">
+                       <b> {!tableRow.question}</b><br/><br/>
+                        <tr>
+                            
+                            &nbsp;&nbsp; <td><ui:inputRadio aura:id="r0" name="others" label="yes" /></td> &nbsp;&nbsp;
+                            &nbsp;&nbsp;<td> <ui:inputRadio aura:id="r1" name="others" label="no" /></td> &nbsp;&nbsp;   
+                        </tr>
+                    </div>
+                </aura:iteration>
+            </div>
+        </div>
+        
+        <div class="slds-col" id="test1" style ="margin-top: -5%; padding-left : 60%">
+            
+            <div class="dnd-table" ondrop="{!c.handleDroptable2}" ondragover="{!c.allowDrop}" >
+                <b>Drop your selected questions here.</b><br/><br/>
+                <aura:iteration items="{!v.table2Data}" var="tableRow">
+                    <div id="{!tableRow.queid}" class="dnd-table-row ques" draggable="true" ondragstart="{!c.handleDrag}">
+                        <b> {!tableRow.question}</b><br/><br/>
+                        <tr>
+                            &nbsp;&nbsp;<td><ui:inputRadio aura:id="r0" name="others" label="yes" /></td>&nbsp;&nbsp;
+                            &nbsp;&nbsp;   <td> <ui:inputRadio aura:id="r1" name="others" label="no" /></td>&nbsp;&nbsp; 
+                        </tr>    
+                    </div>
+                </aura:iteration>
+            </div>
+            <br/>
+            <div  id="test2">
+                <lightning:button variant="brand" label="cancel" title="cancel" onclick="{!c.cancelfun}" class="ColorBlue" />
+               <lightning:button variant="brand" label="Save" title="Click once selected" onclick="{!c.goToNewPage}" class="ColorBlue" /> 
+                
+ 
+            </div>
+        </div>    
+    </div>
+    
+   
+</aura:component>

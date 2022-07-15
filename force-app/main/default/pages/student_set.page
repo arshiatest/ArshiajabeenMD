@@ -1,0 +1,34 @@
+<apex:page controller="student_set">
+    <apex:form >
+    <apex:pageBlock title="student details">
+        <apex:pageblockSection >
+         <apex:pageBlockSectionItem >
+            <apex:outputLabel value="name"/>
+             <apex:inputText value="{!name}"/>
+            </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="branch"/>
+             <apex:inputText value="{!branch}"/>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+            <apex:outputLabel value="city"/>
+             <apex:inputText value="{!city}"/>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+            <apex:outputLabel value="age"/>
+             <apex:inputText value="{!age}"/>
+            </apex:pageBlockSectionItem>
+        </apex:pageblockSection>
+        <apex:pageBlockButtons location="top">
+            <apex:commandButton value="submit" action="{!create}"/> 
+            <apex:commandButton value="show" action="{!show}"/>
+       </apex:pageBlockButtons>
+        <apex:pageBlockTable var="a" value="{!std1}">
+               <apex:column value="{!a['name']}"/>
+               <apex:column value="{!a['branch']}"/>
+               <apex:column value="{!a['city']}"/>
+               <apex:column value="{!a['age']}"/>            
+        </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

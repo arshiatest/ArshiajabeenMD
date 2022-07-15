@@ -1,0 +1,9 @@
+<apex:page controller="task4_opps">
+    <apex:pageblock >
+    <apex:pageblocktable value="{!opps}" var="o">
+        <apex:column value="{!o.name}"/>
+         <apex:column value="{!o.amount}"/>
+         <apex:column value="{!o.stagename}"/>
+        </apex:pageblocktable>
+    </apex:pageblock>
+</apex:page>

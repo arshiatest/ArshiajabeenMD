@@ -1,0 +1,3 @@
+<apex:page controller="task5_integers">
+    integers: {!ints}
+</apex:page>
