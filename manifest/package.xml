@@ -731,6 +731,7 @@
         <members>AuthorizationFormText.Locale</members>
         <members>AuthorizationFormText.Name</members>
         <members>AuthorizationFormText.SummaryAuthFormText</members>
+        <members>Autorabit__c.Active__c</members>
         <members>BusinessBrand.Name</members>
         <members>BusinessBrand.OrgId</members>
         <members>BusinessBrand.ParentId</members>
@@ -2342,6 +2343,7 @@
         <members>AuthorizationFormConsent</members>
         <members>AuthorizationFormDataUse</members>
         <members>AuthorizationFormText</members>
+        <members>Autorabit__c</members>
         <members>BusinessBrand</members>
         <members>Campaign</members>
         <members>CampaignMember</members>
